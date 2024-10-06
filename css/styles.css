@@ -1,0 +1,767 @@
+@media (max-width: 768px) {
+    .logo h1 {
+        font-size: 6vw; 
+    }
+
+    .logo h2 {
+        font-size: 3vw;
+    }
+
+    .slide-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .slide-text p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .logo h1 {
+        font-size: 3vw;
+    }
+
+    .logo h2 {
+        font-size: 1.5vw;
+    }
+}
+
+/* Styling for the Dreamweaver Diaries header text */
+.logo h1 a, 
+.logo h2 a {
+    text-decoration: none; /* Remove underline */
+    color: black;          /* Ensure text remains black */
+}
+
+.logo h1 a:hover, 
+.logo h2 a:hover, 
+.logo h1 a:visited, 
+.logo h2 a:visited, 
+.logo h1 a:focus, 
+.logo h2 a:focus, 
+.logo h1 a:active, 
+.logo h2 a:active {
+    text-decoration: none; /* Ensure no underline on hover/click */
+    color: black;          /* Ensure text stays black */
+}
+
+/* Slider Section */
+.slider {
+    position: relative;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-bottom: none;
+}
+
+.slide-container {
+    display: flex;
+    width: calc(100% * 3); /* 3 slides in total */
+    transition: transform 0.5s ease-in-out; /* Tambahkan easing agar lebih halus */
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+}
+
+.slide {
+    width: 33.33%; /* Each slide takes up 1/3 of the container */
+    position: relative;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: 100%; 
+    height: auto;
+    max-width: 100%;
+    max-height: 500px;
+    border-radius: 5px;
+}
+
+.slide-text {
+    position: absolute;
+    top: 50%;  /* Tempatkan di tengah secara vertikal */
+    left: 50%; /* Tempatkan di tengah secara horizontal */
+    transform: translate(-50%, -50%); /* Pusatkan kotak di tengah gambar */
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.slide-text h3 {
+    font-family: 'Candara', serif;
+    font-size: 2rem;
+    color: #222;
+}
+
+.slide-text p {
+    font-size: 1rem;
+    color: #555;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+hr {
+    border: none; 
+    height: 1px; 
+    background-color: transparent; /* Membuat garis transparan */
+    margin: 20px 0; 
+}
+
+img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f7f5f2;
+    color: #333;
+    line-height: 1.2;
+}
+
+/* Header Section */
+header {
+    background-color: #ffffff;
+    padding: 50px 10px;
+    text-align: center;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.logo h1 {
+    font-size: 6vw;
+    font-family: 'Playfair Display', serif;
+    color: #222;
+    margin-bottom: 0px;
+    letter-spacing: -3px;
+}
+
+.logo h2 {
+    font-size: 1.5vw;
+    font-family: 'Courier New', serif;
+    color: #222;
+    margin-top: 0px; 
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+nav {
+    font-family: 'Courier New', serif;
+    margin-top: 120px;
+    padding-top: 20px;
+    padding-bottom: 20px; 
+    border-top: 1px solid #896363;
+    border-bottom: 1px solid #896363;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 18px 18px; /* Jarak dalam kotak */
+    transition: all 0s ease; /* Transisi halus */
+}
+
+nav ul li a:hover {
+    border: 1px solid #333; /* Garis kotak di sekitar teks saat di-hover */
+    background-color: #f0f0f0; /* Warna latar belakang kotak */
+    border-radius: 0px; /* Membuat sudut kotak tumpul */
+}
+
+/* Gaya untuk Submenu Dropdown */
+.dropdown-content {
+    display: none; /* Sembunyikan submenu secara default */
+    position: absolute; /* Posisi absolute relatif ke parent li */
+    top: 250%; /* Letakkan submenu tepat di bawah item induk */
+    left: 0;
+    min-width: 145px; /* Lebar minimum submenu */
+    z-index: 1000; /* Pastikan submenu berada di atas konten lainnya */
+}
+
+.dropdown-content li {
+    display: block; /* Tampilkan item submenu secara vertikal */
+    margin-bottom: 25px;
+}
+
+.dropdown-content li a {
+    padding: 12px 16px; /* Padding untuk item submenu */
+    color: #333;
+    background-color: #fff;
+    border: none;
+    border-bottom: 1px solid #ddd; /* Garis pemisah antar item */
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content li a:hover {
+    background-color: #f0f0f0; /* Warna latar belakang saat di-hover */
+}
+
+/* Tampilkan submenu saat di-hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Optional: Menghilangkan garis bawah pada submenu terakhir */
+.dropdown-content li:last-child a {
+    border-bottom: none;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #eaeaea;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-text h2 {
+    font-family: 'Candara', serif;
+    font-size: 3rem;
+    color: #222;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Content Section */
+.content {
+    max-width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    box-shadow: 0px 0px 100px rgba(0,0,0,0.1);
+}
+
+.post {
+    margin-bottom: 40px;
+}
+
+.post h3 {
+    font-family: 'Candara', serif;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.post p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.post {
+    background-color: #fff;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.post img {
+    max-width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #b5b5b5;
+}
+
+/* Vertical Content Section */
+.vertical-content {
+    display: block;
+    margin: 0px auto;
+    max-width: 80%;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+}
+
+.post-vertical {
+    background-color: #fff;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex; /* Tetap gunakan flex untuk membuat layout horizontal */
+    align-items: center; /* Menyelaraskan konten secara vertikal */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post-vertical img {
+    max-width: 400px;
+    border-radius: 5px;
+    margin-right: 20px; /* Memberi jarak antara gambar dan teks */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.post-vertical h3 {
+    font-family: 'Candara', serif;
+    font-size: 2rem;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: #222;
+    text-align: center; /* Mengatur teks h3 menjadi rata tengah */
+    width: 100%; /* Membuat h3 menempati seluruh lebar konten sebelah kanan */
+}
+
+.post-vertical p {
+    font-family: 'Candara', serif;
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+    text-align: center; /* Opsional, jika ingin paragraf tetap rata kiri */
+    line-height: 1.5;
+}
+
+/* Atur area teks di sebelah kanan */
+.post-vertical .text-content {
+    flex: 1; /* Isi sisa ruang setelah gambar */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.read-morev {
+    padding: 8px 16px;
+    color: #000000;
+    text-decoration: underline;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* .read-morev:hover {
+    background-color: #555;
+} */
+
+
+/* Styling for the welcome post */
+.welcome-post {
+    text-align: center;
+    padding: 20px;
+}
+
+.welcome-post img.welcome-image {
+    width: 950px;
+    height: 600px;
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.welcome-post p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+/* Styling for the about post */
+.about-post {
+    text-align: center;
+    padding: 20px;
+}
+
+.about-post img.about-image {
+    width: 950px;
+    height: 700px;
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.about-post p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+/* Contact Section */
+.contact-content {
+    max-width: 80%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.contact-image {
+    width: 100%;
+    height: 500px;
+    max-width: 900px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.contact-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    font-family: 'Candara', serif;
+    font-size: 1.2rem;
+    color: #333;
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.contact-form input, .contact-form textarea {
+    font-family: 'Candara', serif;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    width: 100%;
+    font-family: 'Candara', serif;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #b5b5b5;
+}
+
+/* My Story Section */
+.mystory-content {
+    max-width: 80%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.mystory-image {
+    width: 950px;
+    height: 600px;
+    max-width: 100%;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.mystory-content h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.mystory-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* My Business Section */
+.mybusiness-content {
+    max-width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.business-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.business-image {
+    width: 100%;
+    height: 600px;
+    max-width: 900px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.mybusiness-content h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.mybusiness-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+
+
+
+/* Footer Section */
+footer {
+    background-color: #f8f8f8;
+    padding: 40px 0;
+    font-family: 'Candara', serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-media, .about, .quick-links {
+    width: 30%;
+    text-align: center;
+}
+
+.social-media ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.quick-links ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+.social-media h3, .about h3, .quick-links h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.social-media ul li {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.social-media ul li a img {
+    width: 30px;
+    height: 30px;
+    display: block;
+    text-align: center;
+}
+
+.social-media ul li a {
+    display: flex;
+    align-items: center;
+}
+
+.social-media ul li a:hover {
+    transform: scale(1.2);
+}
+
+.about p {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.8;
+}
+
+.social-media p {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.8;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.footer-bottom hr {
+    margin: 5px auto;
+    width: 90%;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: #888;
+}
+
+/* Styling the vertical line between sections */
+/* .footer-container > div:not(:last-child) {
+    border-right: 1px solid #ccc;
+    padding-right: 30px;
+    margin-right: 30px;
+} */
+
+.quick-links ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    padding: 5px;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+.quick-links ul li a:hover {
+    text-decoration: underline;
+    text-decoration-color: blue;
+}
+
+@media (max-width: 576px) {
+    header, nav, footer {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .slider {
+        width: 90%;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .logo h1 {
+        font-size: 8vw;
+    }
+
+    .slide-text h3 {
+        font-size: 1.2rem;
+    }
+
+    .slide-text p {
+        font-size: 0.8rem;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-container > div {
+        border-right: none;
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .logo h1 {
+        font-size: 5vw;
+    }
+
+    .slide-text h3 {
+        font-size: 1.8rem;
+    }
+
+    .slide-text p {
+        font-size: 1rem;
+    }
+
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .quick-links ul li {
+        margin-bottom: 15px;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/* Hide the original nav menu in mobile */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        border-top: 1px solid #896363;
+        z-index: 999;
+    }
+}
